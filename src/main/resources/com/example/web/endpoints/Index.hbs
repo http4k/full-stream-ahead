@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>http4k Datastar demo</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar/bundles/datastar.js"></script>
+</head>
+<body>
+
+<div id="contact_1">
+    <label>First Name: John</label>
+    <label>Last Name: Doe</label>
+    <label>Email: joe@blow.com</label>
+    <div>
+        <button data-on-click="$get('/examples/click_to_edit/contact/1/edit')">
+            Edit
+        </button>
+        <button data-on-click="$get('/examples/click_to_edit/contact/1/reset')">
+            Reset
+        </button>
+    </div>
+</div>
+
+<div
+    id="contents"
+    data-store="{_contents: 'bad apple frames go here', percentage: 0}"
+    data-on-load="$get('/bad_apple/updates')"
+>
+    <div>
+        <input type="range" min="1" max="100" data-model="percentage" disabled />
+        <div><span data-text="$percentage.toFixed(2)"></span>%</div>
+    </div>
+    <div>
+        <pre data-text="$_contents"></pre>
+    </div>
+</div>
+</body>
+</html>
