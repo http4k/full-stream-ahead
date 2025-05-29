@@ -1,9 +1,0 @@
-<div id="contact_{{user.id}}">
-    <label>First Name: {{ user.firstName }}</label>
-    <label>Last Name: {{ user.lastName }}</label>
-    <label>Email: {{ user.email }}</label>
-    <div class="flex gap-4">
-        <button data-on-click="$get('/examples/click_to_edit/contact/{{user.id}}/edit')">Edit</button>
-        <button data-on-click="$patch('/examples/click_to_edit/contact/{{user.id}}/reset')">Reset</button>
-    </div>
-</div>
